@@ -29,6 +29,13 @@ import authRouter from './routes/auth.routes.js'
 import projectRouter from './routes/project.routes.js'
 import taskRouter from './routes/task.routes.js'
 
+app.use("/health", (_, res) => {
+  res.json({
+    success: true,
+    message: "Server is running",
+  });
+});
+
 // Routes declaration
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/projects", projectRouter);
