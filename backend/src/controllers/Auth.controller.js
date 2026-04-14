@@ -18,6 +18,7 @@ class AuthController {
         const options = {
             httpOnly: true,
             secure: config.NODE_ENV === "production",
+            sameSite: "none",
             maxAge: config.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
         };
 
