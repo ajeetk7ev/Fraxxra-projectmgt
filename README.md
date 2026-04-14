@@ -76,7 +76,7 @@ Fraxxra/
 
 ```bash
 git clone https://github.com/ajeetk7ev/Fraxxra-projectmgt.git
-cd fraxxra
+cd Fraxxra-projectmgt
 ```
 
 ### 2. Environment Variables
