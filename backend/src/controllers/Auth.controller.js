@@ -34,17 +34,18 @@ class AuthController {
             );
     });
 
-    static logout = asyncHandler(async (req, res) => {
-        const options = {
-            httpOnly: true,
-            secure: config.NODE_ENV === "production"
-        };
+  static logout = asyncHandler(async (req, res) => {
+    return res
+      .status(200)
+      .clearCookie("accessToken", {
+        httpOnly: true,
+        secure: config.NODE_ENV === "production",
+        sameSite: "none",
+        path: "/",
+      })
+      .json(new ApiResponse(200, {}, "User logged out successfully"));
+  });
 
-        return res
-            .status(200)
-            .clearCookie("accessToken", options)
-            .json(new ApiResponse(200, {}, "User logged out successfully"));
-    });
 
     static getCurrentUser = asyncHandler(async (req, res) => {
         return res
