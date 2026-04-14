@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  :root {
+    --background: #F8FAFC;
+    --foreground: #0F172A;
+    --card: #FFFFFF;
+    --card-foreground: #0F172A;
+    --popover: #FFFFFF;
+    --popover-foreground: #0F172A;
+    --primary: #3B82F6;
+    --primary-foreground: #FFFFFF;
+    --secondary: #F1F5F9;
+    --secondary-foreground: #0F172A;
+    --muted: #F1F5F9;
+    --muted-foreground: #475569;
+    --accent: #F1F5F9;
+    --accent-foreground: #0F172A;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: #E2E8F0;
+    --input: #E2E8F0;
+    --ring: #3B82F6;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #0B1220;
+    --foreground: #E5E7EB;
+    --card: #111827;
+    --card-foreground: #E5E7EB;
+    --popover: #111827;
+    --popover-foreground: #E5E7EB;
+    --primary: #60A5FA;
+    --primary-foreground: #0B1220;
+    --secondary: #1F2937;
+    --secondary-foreground: #E5E7EB;
+    --muted: #1F2937;
+    --muted-foreground: #9CA3AF;
+    --accent: #1F2937;
+    --accent-foreground: #E5E7EB;
+    --destructive: #7F1D1D;
+    --destructive-foreground: #E5E7EB;
+    --border: #374151;
+    --input: #374151;
+    --ring: #60A5FA;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 dark:bg-slate-800 rounded-full;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300 dark:bg-slate-700;
+  }
+}
