@@ -75,7 +75,7 @@ Fraxxra/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fraxxra.git
+git clone https://github.com/ajeetk7ev/Fraxxra-projectmgt.git
 cd fraxxra
 ```
 
